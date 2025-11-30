@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypacileo <ypacileo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/11/30 18:40:20 by ypacileo         ###   ########.fr       */
+/*   Created: 2025/11/30 18:58:53 by ypacileo          #+#    #+#             */
+/*   Updated: 2025/11/30 19:15:30 by ypacileo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef Zombie_H
-# define Zombie_H
+#include "newZombie.h"
 
-#include <string>
-#include <iostream>
-
-class Zombie
+Zombie *newZombie(std::string name)
 {
-	private:
-	std::string name;
-	
-	public:
-	Zombie();
-	Zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
-};
-
-#endif
+	Zombie *zombie = new Zombie(name);
+	return (zombie);
+}

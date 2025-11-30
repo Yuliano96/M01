@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypacileo <ypacileo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/11/30 18:40:20 by ypacileo         ###   ########.fr       */
+/*   Created: 2025/11/30 18:52:02 by ypacileo          #+#    #+#             */
+/*   Updated: 2025/11/30 19:25:51 by ypacileo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef Zombie_H
-# define Zombie_H
+#include "newZombie.h"
 
-#include <string>
-#include <iostream>
 
-class Zombie
+int main()
 {
-	private:
-	std::string name;
-	
-	public:
-	Zombie();
-	Zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
-};
+	Zombie *zombie = newZombie("FOOD");
 
-#endif
+	zombie->announce();
+
+	delete zombie;
+	return (0);
+}
