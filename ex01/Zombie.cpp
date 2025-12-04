@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/12/04 22:04:26 by yuliano          ###   ########.fr       */
+/*   Created: 2025/11/30 18:35:57 by ypacileo          #+#    #+#             */
+/*   Updated: 2025/12/04 22:59:49 by yuliano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <string>
-#include <iostream>
-
-class Zombie
+Zombie::Zombie()
 {
-	private:
+	name = "";
+}
 
-	std::string name;
-	
-	public:
+Zombie::Zombie(const std::string &_name)
+{
+	name = _name;
+}
 
-	Zombie();
-	Zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
-};
+void Zombie::announce(void)
+{
+	std::cout<<name<<": BraiiiiiiinnnzzzZ..."<<std::endl;
+}
 
-#endif
+void Zombie::set_zombie(const std::string &_name)
+{
+	name = _name;
+}
+
+Zombie::~Zombie(void)
+{
+	std::cout << name << ": Destroyed "<<std::endl;
+}

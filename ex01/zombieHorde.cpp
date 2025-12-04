@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/12/04 22:04:26 by yuliano          ###   ########.fr       */
+/*   Created: 2025/12/04 22:35:35 by yuliano           #+#    #+#             */
+/*   Updated: 2025/12/04 23:31:31 by yuliano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <string>
-#include <iostream>
-
-class Zombie
+Zombie *zombieHorde(int N, std::string name)
 {
-	private:
-
-	std::string name;
+	Zombie *horde;
 	
-	public:
+	if (N <= 0)
+		return (NULL);
+	horde = new Zombie[N];
 
-	Zombie();
-	Zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
-};
-
-#endif
+	for(int i = 0; i < N; i++)
+		horde[i].set_zombie(name);
+	return (horde);
+}

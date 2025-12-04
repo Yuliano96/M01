@@ -6,15 +6,15 @@
 #    By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/30 18:49:02 by ypacileo          #+#    #+#              #
-#    Updated: 2025/12/04 21:52:57 by yuliano          ###   ########.fr        #
+#    Updated: 2025/12/04 23:30:45 by yuliano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++ -g
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombie
-SRC = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+NAME = horde
+SRC = Zombie.cpp main.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
