@@ -6,11 +6,12 @@
 /*   By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 22:35:35 by yuliano           #+#    #+#             */
-/*   Updated: 2025/12/04 23:31:31 by yuliano          ###   ########.fr       */
+/*   Updated: 2025/12/06 09:31:45 by yuliano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
 
 Zombie *zombieHorde(int N, std::string name)
 {
@@ -24,3 +25,5 @@ Zombie *zombieHorde(int N, std::string name)
 		horde[i].set_zombie(name);
 	return (horde);
 }
+
+

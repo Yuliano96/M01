@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/12/06 09:31:05 by yuliano          ###   ########.fr       */
+/*   Created: 2025/12/06 09:54:41 by yuliano           #+#    #+#             */
+/*   Updated: 2025/12/06 12:28:49 by yuliano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+# ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
-class Zombie
+class Weapon
 {
 	private:
-
-	std::string name;
+	
+	std::string type;
 	
 	public:
-
-	Zombie();
-	Zombie(const std::string &_name);
-	void	set_zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
+	
+	Weapon();
+	Weapon(const std::string &_type);
+	
+	/*
+	const antes del tipo → const en el valor retornado.
+	const al final del método → método no puede modificar el objeto.
+	*/
+	const std::string &getType() const;
+	void setType(const std::string &_type);
+	
 };
-
-Zombie *zombieHorde(int N, std::string name);
 
 #endif

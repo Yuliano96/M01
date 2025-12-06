@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuliano <yuliano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 16:56:52 by ypacileo          #+#    #+#             */
-/*   Updated: 2025/12/06 09:31:05 by yuliano          ###   ########.fr       */
+/*   Created: 2025/12/06 12:14:27 by yuliano           #+#    #+#             */
+/*   Updated: 2025/12/06 12:27:24 by yuliano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanA.hpp"
 
-#include <string>
-#include <iostream>
-
-class Zombie
+HumanA::HumanA()
 {
-	private:
-
-	std::string name;
+	Weapon w;
 	
-	public:
+	name = "";
+	weapon = w;
+}
 
-	Zombie();
-	Zombie(const std::string &_name);
-	void	set_zombie(const std::string &_name);
-	void	announce(void);
-	~Zombie();
-};
+HumanA::HumanA(const std::string &_name, Weapon _weapon)
+{
+	name = _name;
+	weapon = _weapon;
+}
 
-Zombie *zombieHorde(int N, std::string name);
+void HumanA::set_name(const std::string &_name)
+{
+	name = _name;
+}
 
-#endif
+void HumanA::set_weapon(const Weapon &_weapon)
+{
+	weapon = _weapon;
+}
+
+void HumanA::attack()
+{
+	std::cout<<name<<"ataca con su"<<weapon<<endl;
+}
